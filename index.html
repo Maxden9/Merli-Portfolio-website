@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merli Portfolio - Horror Theme</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/e2dd26d346.js" crossorigin="anonymous"></script>
+    <a id="goUp" href="#"><i class="fa-solid fa-caret-up"></i></a>
+
+    <script type="module">
+        import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+        const profile = document.getElementById("logo");
+        profile.addEventListener("click", () => {
+            confetti({
+                particleCount: 800,
+                spread: 1000,
+                origin: { y: 1 },
+                colors: ['#330000', '#660000', '#990000', '#cc0000', '#ff0000', '#800000', '#4b0000']
+            });
+        });
+    </script>
+
+    <header class="header">
+        <a><img class="logo" id="logo" src="images/logo.gif" alt="Logo"></a>
+        <nav id="navBar">
+            <ul id="menubar">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#moreImgs">MORE IMAGES</a></li>
+                <li><a href="#contacts">CONTACTS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="main-heading">Hi,<br> I am <span id="intro"></span></h1>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#intro', {
+            strings: ["Merli", "an Editor", "an Artist", "a Designer", "Maxden's Friend"],
+            typeSpeed: 100,
+            backSpeed: 70,
+            loop: true
+        });
+    </script>
+
+    <div class="intro">
+        <h1>Welcome!</h1>
+        <p>Dare to enter?</p>
+    </div>
+
+    <section id="home">
+        <div class="home-grid">
+            <div class="home-grid-item">
+                <img src="images/main1.png" alt="Featured Work 1">
+            </div>
+            <div class="home-grid-item">
+                <img src="images/main2.png" alt="Featured Work 2">
+            </div>
+            <div class="home-grid-item">
+                <img src="images/main3.png" alt="Featured Work 3">
+            </div>
+            <div class="home-grid-item">
+                <img src="images/main4.png" alt="Featured Work 4">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Graphic designer with 3 years of experience. Specialized in Miscellaneous art-styles.</p>
+    </section>
+
+    <section id="moreImgs">
+        <h1>More Images</h1>
+        <p>Haunted visuals and eerie designs.</p>
+        <div class="gallery">
+            <div class="gallery-grid">
+                <div class="gallery-item" data-src="images/IMG_20240326_023957_704.jpg"><img
+                        src="images/IMG_20240326_023957_704.jpg" alt=""></div>
+                <div class="gallery-item" data-src="images/20230815_191954.jpg"><img src="images/20230815_191954.jpg"
+                        alt=""></div>
+                <div class="gallery-item" data-src="images/2024011222442.png"><img src="images/2024011222442.png"
+                        alt=""></div>
+                <div class="gallery-item" data-src="images/dda.gif"><img src="images/dda.gif" alt=""></div>
+                <div class="gallery-item" data-src="images/expojpg.jpg"><img src="images/expojpg.jpg" alt=""></div>
+                <div class="gallery-item" data-src="images/image-36.webp"><img src="images/image-36.webp" alt=""></div>
+                <div class="gallery-item" data-src="images/LADRON!4.png"><img src="images/LADRON!4.png" alt=""></div>
+                <div class="gallery-item" data-src="images/20230817_0615344.jpg"><img src="images/20230817_0615344.jpg"
+                        alt=""></div>
+                <div class="gallery-item" data-src="images/LADRON!5.png"><img src="images/LADRON!5.png" alt=""></div>
+                <div class="gallery-item" data-src="images/ugly head100.png"><img src="images/ugly head100.png" alt="">
+                </div>
+                <div class="gallery-item" data-src="images/Lardo1.png"><img src="images/Lardo1.png" alt=""></div>
+                <div class="gallery-item" data-src="images/Lardo2.png"><img src="images/Lardo2.png" alt=""></div>
+            </div>
+            <div class="gallery-controls">
+                <button class="gallery-btn" id="show-more-btn">Show More</button>
+                <button class="gallery-btn hidden" id="show-less-btn">Show Less</button>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightbox-close">&times;</button>
+            <div class="lightbox-content">
+                <img src="" alt="" id="lightbox-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h1>Contact Me</h1>
+        <p>Email: yourname@example.com</p>
+        <p>Social Media Links</p>
+    </section>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#moreImgs">MORE IMAGES</a>
+        <a href="#contacts">CONTACTS</a>
+    </div>
+    <span id="sideClick" onclick="openNav()">&#9776;</span>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("sideClick").style.display = "none";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("sideClick").style.display = "block";
+        }
+    </script>
+
+    <div class="footer">
+        <h4>All rights reserved Merli <3 2025</h4>
+                <h6>Made with ❤️ by Maxden</h6>
+    </div>
+</body>
+
+</html>
